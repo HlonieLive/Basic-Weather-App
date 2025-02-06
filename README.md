@@ -21,50 +21,38 @@ Before running the app, ensure you have the following installed:
     Requests : A Python library for making HTTP requests.
      
 
-## Installation 
-
-1. Clone the repository or download the source code: 
-    git clone https://github.com/yourusername/weather-app.git
-    cd weather-app
-     
- 
-2. Install the required dependencies: 
-    pip install pygame requests
-     
-     
-
-3. Obtain an API key from OpenWeatherMap: 
-    Sign up at: https://openweathermap.org/appid 
-    Replace <YOUR_API_KEY> in the weather_app.py file with your actual API key.
-         
-
-## Usage
+## Installation
 
 Clone the repository or download the source code:
+
     git clone https://github.com/yourusername/weather-app.git
     cd weather-app
         
  
 
 Install the required dependencies using the requirements.txt file: 
+
     pip install -r requirements.txt
  
  
 
 Obtain an API key from OpenWeatherMap: 
+
     Sign up at: https://openweathermap.org/appid 
     Replace <YOUR_API_KEY> in the weather_app.py file with your actual API key.
 
 
 Run the script:
+
     python3 weather_app.py
      
      
-A Pygame window will open, displaying four buttons: 
-    **Days** : Shows the current weather data (temperature, wind speed, humidity).
-    **Wind** : Placeholder for wind-related details.
-    **Humidity** : Placeholder for humidity-related details.
-    **Hours** : Placeholder for hourly weather forecasts.
+A Pygame window will open, displaying four buttons:
+    
+    Days : Shows the current weather data (temperature, wind speed, humidity).
+    Wind : Placeholder for wind-related details.
+    Humidity : Placeholder for humidity-related details.
+    Hours : Placeholder for hourly weather forecasts.
          
 
 Click on any button to toggle its visibility and display the corresponding weather information. 
@@ -90,10 +78,15 @@ Replace <YOUR_API_KEY> with your actual API key obtained from OpenWeatherMap.
 Contributions are welcome! If you'd like to improve this project, follow these steps: 
 
     Fork the repository.
-    Create a new branch: git checkout -b feature/new-feature.
-    Make your changes and commit them: git commit -m "Add new feature".
-    Push to the branch: git push origin feature/new-feature.
-    Submit a pull request.
+    
+    Create a new branch:
+        git checkout -b feature/new-feature
+        
+    Make your changes and commit them: 
+        git commit -m "Add new feature"
+        
+    Push to the branch:
+        git push origin feature/new-feature
      
 
 ## License 
