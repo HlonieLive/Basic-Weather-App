@@ -1,9 +1,11 @@
+# Imports:
 import pygame
+import requests
 
 # Initialise Pygame
 pygame.init()
 
-# Create a window/screen
+# Create a window/screen:
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Weather App")
 
@@ -14,6 +16,8 @@ humidity = pygame.Rect(500, 100, 100, 50)
 hours = pygame.Rect(700, 100, 100, 50)
 
 # Colors
+white = (255, 255, 255)
+black = (0, 0, 0)
 button_color = (211, 211, 211)
 clicked_color = (105, 105, 105)
 
@@ -23,6 +27,24 @@ def draw_button(button, color, text):
     font = pygame.font.SysFont("Arial", 15)
     text_surface = font.render(text, True, (255, 255, 255))
     screen.blit(text_surface, (button.x + 20, button.y + 20))
+
+
+def get_weather(city, api_key):
+    """This Function gets the weather from OpenWeatherMap API"""
+
+    base_url = "http://api.openweathermap.org/data/2.5/weather"
+    parameters = {
+        "q": city,
+        "appid": api_key,
+        "units": "metric"
+    }
+    try:
+        response = requests.get(base_url, params=parameters)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print("Error fetching weather data: {e}")
+        return
 
 # A Loop that keeps the screen ON
 running = True
